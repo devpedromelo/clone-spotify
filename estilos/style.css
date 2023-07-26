@@ -2,11 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
+/* configs gerais */
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    border: none;
 }
 
 :root{
@@ -14,6 +17,8 @@
     --bg-header: black;
     --color-text: white;
 }
+
+/* header */
 
 header{
     display: flex;
@@ -27,6 +32,10 @@ header{
     width: 100%;
     justify-content: space-around;
     align-items: center;
+}
+
+.menu{
+    visibility: hidden;
 }
 
 .header-container img{
@@ -44,7 +53,6 @@ ul li{
 }
 
 ul li a{
-    color: var(--color-text);
     text-decoration: none;
     font-weight: 600;
     transition: all .3s ease;
@@ -52,4 +60,233 @@ ul li a{
 
 ul li a:hover{
     color: rgb(134, 209, 134);
+}
+
+/* section */
+
+section, .content{
+    display: flex;
+    width: 100%;
+}
+
+.content{
+    flex-direction: column;
+    margin: auto;
+    padding: 40px;
+}
+
+.title-content{
+    margin-top: 50px;
+}
+
+.title-content h1{
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.sub-title-content{
+    margin-top: 20px;
+    font-size: 20px;
+    letter-spacing: '1px';
+}
+
+.title-content h1,.sub-title-content,.small-content p{
+    text-align: initial;
+}
+
+.title-content, .sub-title-content,.btn-content,.small-content{
+    margin-left: 15%;
+}
+
+ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small-content p{
+    color: var(--color-text);  
+}
+
+.btn-content,.small-content{
+    margin-top: 40px;
+}
+
+.content, .img-spotify{
+    background-color: var(--bg-color);
+}
+
+.btn-content .btn-assinar{
+    padding: 15px;
+    width: 250px;
+    outline: none;
+    background-color: var(--bg-header);
+}
+
+.btn-content .btn-planos{
+    padding: 12px;
+    margin-left: 12px;
+    border: 2px solid var(--color-text);
+    width: 160px;
+    background-color: transparent;
+}
+
+.btn-assinar, .btn-planos{
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;/*deixar maiusculo */
+    cursor: pointer;
+}
+
+.btn-assinar:hover{
+    transform: scale(1.1);
+}
+
+.btn-planos:hover{
+    transform: scale(1.1);
+    background-color: #762e76;
+}
+
+.small-content p{
+    font-size: 12px;
+}
+
+.img-spotify{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 80%;
+    padding-right: 150px;
+}
+
+.img-spotify img{
+    width: 70%;
+    margin-right: 50px;
+    box-shadow: 2px 2px 10px #0000002b;
+}
+
+/* section de conteudo */
+
+.section-info{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.title-section-info{
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.title-section-info h2{
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: "1px";
+}
+
+.img-section-info-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.img-section-info{
+    display: flex;
+    justify-content: center;
+}
+
+.imagens-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.imagens-info img{
+    width: 150px;
+}
+
+.text-info{
+    margin-top: 20px;
+    margin-left: 15px;
+    /* text-align: initial; */
+}
+
+.text-info span{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.text-info p{
+    margin-top: 10px;
+}
+
+/* ==================MEDIA QUERIES================== */
+
+/* media query para a imagem */
+@media screen and (max-width: 1201px) {
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-spotify{
+        width: 100%;
+        padding-right: 0px;
+    }
+
+    .img-spotify img{
+        margin: auto;
+        width: 40%;
+    }
+
+    .title-content, .sub-title-content,.btn-content,.small-content{
+        margin-left: 10%;
+    }
+}
+
+/* media query para botoes e menu*/
+@media screen and (max-width: 768px) {
+    ul{
+        display: none;
+    }
+
+    .menu{
+        visibility: visible;
+        display: flex;
+        justify-content: space-around;
+        color: var(--color-text);
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+    }
+
+    .btn-content .btn-assinar,.btn-content .btn-planos{
+        width: 100%;
+        margin: auto;
+    }
+
+    .btn-content .btn-planos{
+        margin-top: 8px;
+    }
+
+    .img-spotify{
+        padding-right: 150px;
+    }
+
+    .img-spotify img {
+        margin: auto;
+        margin-left: 38%;
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:601px) {
+    .img-spotify{
+        padding-right: 115px;
+    }
 }
