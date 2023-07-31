@@ -279,6 +279,7 @@ ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small
     padding: 2px 4px;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .box-transparent{
@@ -381,9 +382,27 @@ ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small
     margin-top: 150px;
 }
 
+/*footer*/
+
+.footer-logo img{
+    width: 90px;
+}
+
 /* ==================MEDIA QUERIES================== */
 
-@media screen and (max-width: 1201px) {
+@media screen and (max-width: 1292px){
+    #card1 .card-plan-info span{
+        font-size: 14.5px;
+    }
+}
+
+@media screen and (max-width: 1284px){
+    .cards ul li{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1204px) {
     /* media query para a imagem */
     section{
         display: flex;
@@ -407,23 +426,29 @@ ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small
     .imagens-info img{
         width: 130px;
     }
-}
 
-@media screen and (max-width:980px) {
-    .text-info{
-        text-align: initial;
+    .card-area{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .text-info span{
-        font-size: 17px;
+    .cards{
+        width: 460px;
+        padding: 15px;
+        position: relative;
     }
 
-    .text-info p{
-        font-size: 16px;
+    .box-transparent{
+        width: 70%;
     }
-}
 
-@media screen and (max-width: 949px){
+    #card1 .btn-card-plan,
+    #card2 .btn-card-plan,
+    #card4 .btn-card-plan{
+        margin-top: 10px;
+    }
+
     .img-section-info-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -432,6 +457,26 @@ ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small
     .imagens-info{
         display: flex;
         flex-direction: row;
+    }
+
+    .text-info{
+        text-align: initial;
+    }
+
+    .img-section-info{
+        display: flex;
+        justify-content: initial;
+    }
+}
+
+@media screen and (max-width:980px) {
+
+    .text-info span{
+        font-size: 17px;
+    }
+
+    .text-info p{
+        font-size: 16px;
     }
 }
 
@@ -532,10 +577,20 @@ ul li a, .title-content h1, .sub-title-content, .btn-assinar, .btn-planos,.small
     .title-section-info h2{
         font-size: 33px;
     }
+
+    .title-plan p{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width:601px) {
     .img-spotify{
         padding-right: 115px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .cards{
+        width: 430px;
     }
 }
