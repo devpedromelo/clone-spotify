@@ -14,7 +14,11 @@
             <div class="logo">
                 <img src="imagens/logo.png" alt="logo">
             </div>
-            <div class="menu">&#9776;</div>
+            <div class="menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
 
             <!-- lista  -->
             <ul class="header-items">
@@ -27,6 +31,30 @@
             </ul>
         </div>
     </header>
+
+    <!--Quando o menu estiver aberto-->
+    <nav class="side-bar">
+        <ul class="header-items">
+            <div class="menu-closed">
+                <div class="menu-closed-items">
+                    <div class="line" id="line1"></div>
+                    <div class="line" id="line2"></div>
+                    <div class="line" id="line3"></div>
+                </div>
+            </div>
+            <li class="header-item"><a href="@">Premium</a></li>
+            <li class="header-item"><a href="@">Suporte</a></li>
+            <li class="header-item"><a href="@">Baixar</a></li>
+            <li class="header-item traço">-</li>
+            <li class="header-item"><a href="@" class="small-li">Inscrever-se</a></li>
+            <li class="header-item"><a href="@" class="small-li">Entrar</a></li>
+            <div class="side-bar-brand">
+                <span>
+                    <img src="imagens/logo.png" alt="logo do Spotify">
+                </span>
+            </div>
+        </ul>
+    </nav>
 
     <!-- section nav -->
     <section class="section">
@@ -286,5 +314,7 @@
             </div>
         </nav>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
